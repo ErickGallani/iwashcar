@@ -1,4 +1,32 @@
 /* Empty. Add your own CSS if you like */
 ion-content {
+  background-color: #ffffff;
+}
+
+.bar.bar-stable {
   background-color: #ffca3a;
+}
+
+.bar.bar-stable .title {
+  font-weight: bold;
+}
+
+.logo-login {
+  text-align: center;
+}
+
+.btn-entrar {
+  min-width: 90%;
+}
+
+.btn-entrar.label-entrar {
+  font-weight: bold;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }

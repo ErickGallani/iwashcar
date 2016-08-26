@@ -5,6 +5,24 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
     <title></title>
 
+    <!--<link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">-->
+    <!--<link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">-->
+    <!--<link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">-->
+    <!--<link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">-->
+    <!--<link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">-->
+    <!--<link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">-->
+    <!--<link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">-->
+    <!--<link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">-->
+    <!--<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">-->
+    <!--<link rel="icon" type="image/png" sizes="192x192"  href="favicon/android-icon-192x192.png">-->
+    <!--<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">-->
+    <!--<link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">-->
+    <!--<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">-->
+    <!--<link rel="manifest" href="favicon/manifest.json">-->
+    <!--<meta name="msapplication-TileColor" content="#ffffff">-->
+    <!--<meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">-->
+    <!--<meta name="theme-color" content="#ffffff">-->
+
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="css/ladda-themeless.min.css" rel="stylesheet">
@@ -42,43 +60,16 @@
   <body ng-app="app">
 
     <ion-pane>
-      <!--<ion-header-bar class="bar-stable">-->
-        <!--<h1 class="title">Ionic Blank Starter</h1>-->
-      <!--</ion-header-bar>-->
+      <ion-header-bar class="bar-stable">
+        <h1 class="title">iWashCar</h1>
+      </ion-header-bar>
       <ion-view view-title="Login" name="login-view">
         <ion-content class="padding">
-          <div layout="column" layout-align="center center" layout-fill="layout-fill">
-            <div layout="column" class="loginBox md-whiteframe-z1">
-              <md-toolbar>
-                <h2 class="md-toolbar-tools login-header"><span>Login</span></h2>
-              </md-toolbar>
-              <md-content layout="column" class="md-padding">
-                <form name="form" ng-submit="form.$valid && loginCtrl.login()" novalidate>
-                  <md-input-container class="md-block">
-                    <label for="username">Login</label>
-                    <input type="text" name="username" ng-model="loginCtrl.username" md-auto-hide="false" required />
-                    <div ng-messages="form.$submitted && form.username.$error" md-auto-hide="false">
-                      <div ng-message="required">Login obrigatório</div>
-                    </div>
-                  </md-input-container>
-                  <md-input-container class="md-block">
-                    <label for="password">Senha</label>
-                    <input type="password" name="password" ng-model="loginCtrl.password" required />
-                    <div ng-messages="form.$submitted && form.password.$error" md-auto-hide="false">
-                      <div ng-message="required">Senha obrigatória</div>
-                    </div>
-                  </md-input-container>
-                  <div layout="row" layout-align="center center" style="padding-top:20px;">
-                    <button ladda="loginCtrl.loading" data-style="expand-left" type="submit" class="md-button md-raised md-primary">Entrar</button>
-                  </div>
-                  <div layout="row" layout-align="center center" style="padding-top:20px;">
-                    <md-button href="" md-no-ink="md-no-ink">Esqueci a senha</md-button>
-                  </div>
-                  <div ng-if="loginCtrl.error" class="alert alert-danger">{{loginCtrl.error}}</div>
-                </form>
-              </md-content>
-            </div>
-          </div>
+
+          <ui-view name="menuBar"></ui-view>
+
+          <ui-view name="main"></ui-view>
+
         </ion-content>
       </ion-view>
     </ion-pane>
